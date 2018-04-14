@@ -1,4 +1,4 @@
-Feature: Create a wiki pages
+Feature: Create And Delete New Wiki pages
 
   @createWP @ft
   Scenario Outline: Create page

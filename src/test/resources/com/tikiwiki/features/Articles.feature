@@ -1,4 +1,4 @@
-Feature: Create New Articles
+Feature: Create And Delete New Articles
 
   @createArt @ft 
   Scenario Outline: Create Article
