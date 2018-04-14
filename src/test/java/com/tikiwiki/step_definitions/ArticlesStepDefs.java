@@ -51,6 +51,12 @@ public class ArticlesStepDefs {
 		boolean newArticleCreated = BrowserUtils.isElementCreated(title);
 	    assertTrue(newArticleCreated);
 	}
+	
+	@Then("^I should see created Article for \"([^\"]*)\"$")
+	public void i_should_see_created_Article_for(String title) {
+		boolean newArticleCreated = BrowserUtils.isElementCreated(title);
+	    assertTrue(newArticleCreated);
+	}
 
 	@When("^I click on the List Articles$")
 	public void i_click_on_the_List_Articles() {

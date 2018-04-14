@@ -37,7 +37,7 @@ Feature: Create And Delete New Articles
     And I click on the New Articles
     Then I type in Title input field "<title_text>"
     Then I click on button save
-    And I should see new Article for "<title_text>"
+    And I should see created Article for "<title_text>"
     When I click to Articles menu
     And I click on the List Articles
     Then I type in search input field "<search_text>"
