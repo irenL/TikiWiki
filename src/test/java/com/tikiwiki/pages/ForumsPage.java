@@ -18,24 +18,34 @@ private WebDriver driver;
 	@FindBy(xpath = "//a[@href='#content_admin_forums1-2']")
 	public WebElement ILYforumsCreateNewForumButton;
 	
-	@FindBy(id = "name")
+	@FindBy(xpath = "(//*[@id=\"name\"])[2]")
 	public WebElement ILYforumsNameEntryField; 	
 	
-	@FindBy(name = "description")
+	@FindBy(xpath = "(//*[@name=\"description\"])[2]")
 	public WebElement ILYforumsdescriptionEntryField;
 	
 	@FindBy(name = "save")
 	public WebElement ILYforumsSaveButton;
 	
-	// !!!!WORK ON THIS!!!!!
-	//@FindBy(xpath = "=//*[contains(text(), 'forum45')]/../../td[9]")
-	//public WebElement ILYforumsHooverOver;
-
-	//!!! ADD click on delete link
+	@FindBy(xpath="//*[@title='List']")
+	public WebElement ILYforumListButton;
 	
-	@FindBy(xpath = "=//div[3]/button[2]")
+	@FindBy(xpath="//*[@id=\"forums1\"]//td[1]")
+	public WebElement ILYforumTableButton;
+	
+	@FindBy(xpath="//*[@id='adminforums1']//td[2]")
+	public WebElement ILYforumTables;
+	
+	@FindBy(xpath="//*[@href='#content_admin_forums1-1']")
+	public WebElement ILYforumForumsButton;
+	
+	@FindBy(linkText="Delete")
+	public WebElement ILYforumDelete;
+	
+	@FindBy(xpath = "//div[3]/button[2]")
 	public WebElement ILYforumsPopUpOKButton;
 	
+		
 	
 	
 	

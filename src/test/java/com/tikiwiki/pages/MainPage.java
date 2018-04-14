@@ -33,7 +33,7 @@ public class MainPage {
 	@FindBy(xpath = "//*[@href='tiki-list_posts.php']")
 	public WebElement ILYhomeBlogListBlogPostButton;
 
-	@FindBy(xpath = "//*[@ href='#menu_option73']")
+	@FindBy(xpath = "//*[@href='#menu_option272']")
 	public WebElement ILYhomeForumsListLink;
 
 	@FindBy(xpath = "//*[@href='tiki-forums.php']")
