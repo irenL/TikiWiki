@@ -60,11 +60,6 @@ public class WikiPage {
 	@FindBy(xpath = "//a[contains(text(),'Tiki Wiki CMS Groupware ')]")
 	public WebElement scrollDownElement;
 
-	public boolean newPageCreated(String pageName) {
-		WebElement actualName = driver.findElement(By.xpath("//a[contains(text(),'" + pageName + "')]"));
-		return actualName.getText().equals(pageName);
-	}
-
 	public void clickCheckbox(String name) {
 		for (int i = 0; i < eachRowFromTableOfListPages.size(); i++) {
 			if (eachRowFromTableOfListPages.get(i).getText().contains(name)) {

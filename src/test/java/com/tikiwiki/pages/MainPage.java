@@ -73,6 +73,7 @@ public class MainPage {
 	@FindBy(xpath="//a[@href='#menu_option231']")
 	public WebElement wiki;
 
+	@FindBy(xpath="//a[@href='#menu_option250']")
 	public WebElement articles;
 
 	public WebElement blogs;
@@ -97,10 +98,6 @@ public class MainPage {
 		String xpath = "//a[contains(text(),'" +menu+ "')]/..//li";
 		return driver.findElements(By.xpath(xpath));
 	}
-
-
-
-
 
 
 

@@ -2,7 +2,7 @@
 @dev @file_galleries
 Feature: Upload and Delete File
 
-  @upload_file
+  @upload_file @smoke @ft 
   Scenario Outline: Upload file
     Given I login to TikiWiki
     When I click to File Galleries menu
@@ -18,7 +18,7 @@ Feature: Upload and Delete File
       | defect2  | /src/test/resources/testdata/defect2.jpg |
       | defect   | /src/test/resources/testdata/defect.jpg  |
 
-  @delete_file
+  @delete_file @ft
   Scenario: Delete file
     Given I login to TikiWiki
     When I click to File Galleries menu

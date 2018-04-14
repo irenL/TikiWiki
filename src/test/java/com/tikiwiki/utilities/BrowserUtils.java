@@ -20,7 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.google.common.base.Function;
 
 public class BrowserUtils {
-	
+static WebDriver driver = Driver.getDriver();
 	
 	public static void hover(WebElement element) {
 		Actions actions = new Actions(Driver.getDriver());
@@ -121,7 +121,7 @@ public class BrowserUtils {
 		return elemTexts;
 	}
 
-	public static boolean findNameOfElementInTable(List<WebElement> elements, String elementName) {
+	public static boolean isElementInTable(List<WebElement> elements, String elementName) {
 		for (WebElement element : elements) {
 			if (!element.getText().isEmpty()) {
 				if (element.getText().contains(elementName)) {
@@ -133,10 +133,15 @@ public class BrowserUtils {
 	}
 
 	public static void scrollDown(WebElement element) {
-		WebDriver driver = Driver.getDriver();
 		Actions action = new Actions(driver);
 		action.moveToElement(element).click().sendKeys(Keys.PAGE_DOWN).perform();
 
+	}
+	
+	public static boolean isElementCreated(String element) {
+		WebElement actualName = driver.findElement(By.xpath("//a[contains(text(),'" + element + "')]"));
+		waitFor(2);
+		return actualName.getText().equals(element);
 	}
 
 }

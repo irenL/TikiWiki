@@ -53,7 +53,7 @@ public class WikiStepDefs {
 
 	@Then("^I should see new page for \"([^\"]*)\"$")
 	public void i_should_see_new_page_for(String page_name) {
-		boolean newPageCreated = wikiPage.newPageCreated(page_name);
+		boolean newPageCreated = BrowserUtils.isElementCreated(page_name);
 		assertTrue(newPageCreated);
 	}
 	
@@ -69,7 +69,7 @@ public class WikiStepDefs {
 
 	@Then("^I find new created page \"([^\"]*)\" from list pages$")
 	public void i_find_new_created_page_from_list_pages(String pageName) {
-	  boolean foundPage = BrowserUtils.findNameOfElementInTable(wikiPage.eachRowFromTableOfListPages, pageName );
+	  boolean foundPage = BrowserUtils.isElementInTable(wikiPage.eachRowFromTableOfListPages, pageName );
 	  assertTrue(foundPage);
 	}
 
@@ -90,8 +90,7 @@ public class WikiStepDefs {
 	
 	@Then("^I check if \"([^\"]*)\" was deleted from table of list pages$")
 	public void i_check_if_was_deleted_from_table_of_list_pages(String pageName) {
-		boolean foundPage = BrowserUtils.findNameOfElementInTable(wikiPage.eachRowFromTableOfListPages, pageName );
+		boolean foundPage = BrowserUtils.isElementInTable(wikiPage.eachRowFromTableOfListPages, pageName );
 		  assertFalse(foundPage);
 	}
-
 }

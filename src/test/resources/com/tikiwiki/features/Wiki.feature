@@ -1,6 +1,6 @@
 Feature: Create a wiki pages
 
-  @createWP
+  @createWP @ft
   Scenario Outline: Create page
     Given I login to TikiWiki
     When I click to Wiki menu
@@ -23,7 +23,7 @@ Feature: Create a wiki pages
       | DefecTeam_Page1 | Welcome To Our Page1 |
       | DefecTeam Page2 | Welcome To Our Page2 |
 
-  @deleteWP
+  @deleteWP @smoke @ft
   Scenario Outline: Delete New Created Page
     Given I login to TikiWiki
     When I click to Wiki menu

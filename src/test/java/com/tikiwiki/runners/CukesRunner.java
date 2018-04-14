@@ -5,12 +5,12 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
-		plugin= {
+		plugin= {"pretty",
 				"html:target/cucumber-report",
 				"json:target/cucumber.json"
 				},
 
-		tags= "@createWP, @deleteWP,  @upload_file, @delete_file ",
+		tags= "@ft",
 		features="src/test/resources/com/tikiwiki/features/",
 		glue="com/tikiwiki/step_definitions/",
 		dryRun=false

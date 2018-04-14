@@ -61,6 +61,7 @@ public class FileGalleries {
 		    break;
 		case "Articles":
 			mainPage.articles.click();
+			BrowserUtils.waitFor(2);
 		    break;
 		case "Blogs":
 			mainPage.blogs.click();

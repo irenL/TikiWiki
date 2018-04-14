@@ -67,7 +67,7 @@
 				<version>2.21.0</version>
 				<configuration>
 					<suiteXmlFiles> <!-- this line tell maven surefire plugin which file should be executed -->
-						<suiteXmlFile>testng_runner.xml</suiteXmlFile>
+						<suiteXmlFile>${runner}</suiteXmlFile>
 					</suiteXmlFiles>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
@@ -84,7 +84,8 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<projectname>TestProject</projectname> <!-- path to the report that will be generated -->
+							<projectname>TestProject</projectname> 
+							<!-- path to the report that will be generated -->
 							<outputdirectory>${project.build.directory}/cucumber-html-reports</outputdirectory> 
 							<!-- path to the json file that will be used to generate report --> 
 							<!-- it has to match the one on the cukesrunner -->
