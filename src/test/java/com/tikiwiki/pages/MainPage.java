@@ -18,7 +18,7 @@ public class MainPage {
 		this.driver = Driver.getDriver();
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(xpath = "//*[@href='#menu_option67']")
+	@FindBy(xpath = "//*[@href='#menu_option266']")
 	public WebElement ILYhomeBlogsLink;
 	
 	@FindBy(xpath = "//*[@href='tiki-list_blogs.php']")

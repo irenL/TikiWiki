@@ -1,3 +1,5 @@
+#Iryna Liakhovych
+@wikipage
 Feature: Create And Delete New Wiki pages
 
   @createWP @ft

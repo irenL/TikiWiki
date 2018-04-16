@@ -138,7 +138,7 @@ static WebDriver driver = Driver.getDriver();
 
 	}
 	
-	public static boolean isElementCreated(String element) {
+	public static boolean isElementCreated(WebDriver driver, String element) {
 		WebElement actualName = driver.findElement(By.xpath("//a[contains(text(),'" + element + "')]"));
 		waitFor(2);
 		return actualName.getText().equals(element);

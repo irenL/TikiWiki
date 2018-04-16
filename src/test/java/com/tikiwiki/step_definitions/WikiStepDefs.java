@@ -53,7 +53,7 @@ public class WikiStepDefs {
 
 	@Then("^I should see new page for \"([^\"]*)\"$")
 	public void i_should_see_new_page_for(String page_name) {
-		boolean newPageCreated = BrowserUtils.isElementCreated(page_name);
+		boolean newPageCreated = BrowserUtils.isElementCreated(driver, page_name);
 		assertTrue(newPageCreated);
 	}
 	
